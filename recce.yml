@@ -15,8 +15,8 @@ checks:
         primary_keys:
           - customer_id
         changed_only: true
-  - name: Query diff of orders
-    description: Compare facts on orders
+  - name: Aggregation diff of orders
+    description: Compare aggregation results of the facts on orders
     type: query_diff
     params:
         sql_template: |
