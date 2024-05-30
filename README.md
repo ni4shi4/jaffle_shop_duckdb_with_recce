@@ -38,3 +38,10 @@
 git switch feature/add_intermediate
 recce server --review recce-state-example.json
 ```
+
+# `Recce summary`の使用
+
+```
+git switch feature/add_intermediate
+recce summary recce-state-example.json
+```
