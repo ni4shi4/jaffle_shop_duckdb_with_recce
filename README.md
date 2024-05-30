@@ -1,4 +1,4 @@
-# `jaffle_shop` with Recee
+# `jaffle_shop` with Recce
 
 設定等はオリジナルの[README](https://github.com/dbt-labs/jaffle_shop_duckdb?tab=readme-ov-file#testing-dbt-project-jaffle_shop)を参照
 
@@ -10,7 +10,7 @@
 - `PROD`環境の追加
 - プロジェクトの構成([best practices](https://docs.getdbt.com/best-practices/how-we-structure/1-guide-overview)に似せた)
 
-# `Recee`の使い方
+# `Recce`の使い方
 
 - 依存パッケージをインストールする
   ```
@@ -32,7 +32,7 @@
   recce server
   ```
 
-# レビューモードでの`Recee`の起動
+# レビューモードでの`Recce`の起動
 
 ```
 git switch feature/add_intermediate
