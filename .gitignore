@@ -1,5 +1,7 @@
 
 target/
+target-base/
+recce-state*.json
 dbt_packages/
 dbt_modules/
 logs/

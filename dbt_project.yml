@@ -11,7 +11,6 @@ test-paths: ["tests"]
 analysis-paths: ["analysis"]
 macro-paths: ["macros"]
 
-target-path: "target"
 clean-targets:
     - "target"
     - "dbt_modules"
@@ -19,16 +18,17 @@ clean-targets:
 
 require-dbt-version: [">=1.0.0", "<2.0.0"]
 
-seeds: 
+seeds:
   +docs:
     node_color: '#cd7f32'
 
 models:
   jaffle_shop:
-    materialized: table
+    marts:
+      materialized: table
+      +docs:
+        node_color: '#B22D35'
     staging:
       materialized: view
       +docs:
-        node_color: 'silver'
-    +docs:
-      node_color: 'gold'
+        node_color: '#00AE95'

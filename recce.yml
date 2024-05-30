@@ -1,0 +1,17 @@
+# [Optional] GitHub settings
+github:
+  repo: ''
+# Recce Preset Checks
+checks:
+  - name: Query diff of customers
+    description: |
+        This is the demo preset check.
+
+        Please run the query and paste the screenshot to the PR comment.
+    type: query_diff
+    params:
+        sql_template: select * from {{ ref("customers") }}
+    view_options:
+        primary_keys:
+          - customer_id
+        changed_only: true
