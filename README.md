@@ -12,6 +12,10 @@
 
 # `Recee`の使い方
 
+- 依存パッケージをインストールする
+  ```
+  dbt deps
+  ```
 - `PROD`環境向けにdbtを実行する
   ```
   dbt build -t prod
