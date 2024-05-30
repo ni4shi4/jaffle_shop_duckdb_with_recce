@@ -15,3 +15,40 @@ checks:
         primary_keys:
           - customer_id
         changed_only: true
+  - name: Query diff of orders
+    description: Compare facts on orders
+    type: query_diff
+    params:
+        sql_template: |
+          {% set payment_methods = ['credit_card', 'coupon', 'bank_transfer', 'gift_card'] %}
+
+          select
+            {% for payment_method in payment_methods -%}
+              sum({{ payment_method }}_amount) as {{ payment_method }}_amount,
+            {%- endfor %}
+            sum(amount) as amount
+          from {{ ref("orders") }}
+    view_options:
+        changed_only: true
+  - name: Value diff of orders
+    description: Compare values of individual columns of orders
+    type: value_diff
+    params:
+      model: orders
+      primary_key: order_id
+  - name: Lineage diff of orders
+    description: diff on specific 4 nodes
+    type: lineage_diff
+    params: {}
+    view_options:
+      view_mode: changed_models
+      node_ids:
+        - model.jaffle_shop.orders
+        - model.jaffle_shop.stg_orders
+        - model.jaffle_shop.stg_payments
+        - model.jaffle_shop.int_payments_pivoted_to_orders
+  - name: Profile diff of orders
+    description: Compare main statistics of orders
+    type: profile_diff
+    params:
+      model: orders

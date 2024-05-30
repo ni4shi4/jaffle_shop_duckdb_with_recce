@@ -17,6 +17,7 @@ dbt docs generate -t prod --target-path target-base
 ```
 
 ```
+git switch
 dbt build -t qa
 dbt docs generate -t qa
 ```
@@ -24,3 +25,10 @@ dbt docs generate -t qa
 ```
 recce server
 ```
+
+
+
+```
+Error: Compilation Error in sql_operation generated_750ccfefb64c4d92a3ef905e4a236b77 (from remote system.sql) 'audit_helper' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+```
+dbt_profiler
