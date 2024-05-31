@@ -1,6 +1,20 @@
 # `jaffle_shop` with Recce
 
-設定等はオリジナルの[README](https://github.com/dbt-labs/jaffle_shop_duckdb?tab=readme-ov-file#testing-dbt-project-jaffle_shop)を参照
+初期設定はオリジナルの[README](https://github.com/dbt-labs/jaffle_shop_duckdb?tab=readme-ov-file#running-this-project)を参照
+やり方の一部を抜粋すると以下のようになる(Python >= 3.5が必要となる)
+
+```
+git clone https://github.com/ni4shi4/jaffle_shop_duckdb_with_recce.git
+cd jaffle_shop_duckdb_with_recce
+python3 -m venv venv
+source venv/bin/activate
+python3 -m pip install --upgrade pip
+python3 -m pip install -r requirements.txt
+source venv/bin/activate
+dbt build
+dbt docs generate
+dbt docs serve
+```
 
 # オリジナルの`jaffle_shop`との違い
 
