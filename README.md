@@ -14,24 +14,24 @@
 # `Recce`の使い方
 
 - 依存パッケージをインストールする
-  ```
-  dbt deps
-  ```
+    ```
+    dbt deps
+    ```
 - `PROD`環境向けにdbtを実行する
-  ```
-  dbt build -t prod
-  dbt docs generate -t prod --target-path target-base
-  ```
+    ```
+    dbt build -t prod
+    dbt docs generate -t prod --target-path target-base
+    ```
 - `DEV`環境向けにdbtを実行する
-  ```
-  git switch feature/add_intermediate
-  dbt build
-  dbt docs generate
-  ```
+    ```
+    git switch feature/add_intermediate
+    dbt build
+    dbt docs generate
+    ```
 - Recceサーバーを起動する
-  ```
-  recce server
-  ```
+    ```
+    recce server
+    ```
 
 # レビューモードでの`Recce`の起動
 
