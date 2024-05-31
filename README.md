@@ -9,6 +9,7 @@
 - 追加のdbtパッケージ
 - `PROD`環境の追加
 - プロジェクトの構成([best practices](https://docs.getdbt.com/best-practices/how-we-structure/1-guide-overview)に似せた)
+- raw_payments.csvにresult列を追加
 
 # `Recce`の使い方
 
