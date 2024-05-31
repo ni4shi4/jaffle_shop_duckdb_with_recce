@@ -1,6 +1,7 @@
 # `jaffle_shop` with Recce
 
 初期設定はオリジナルの[README](https://github.com/dbt-labs/jaffle_shop_duckdb?tab=readme-ov-file#running-this-project)を参照
+
 やり方の一部を抜粋すると以下のようになる(Python >= 3.5が必要となる)
 
 ```
