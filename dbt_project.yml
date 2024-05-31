@@ -29,7 +29,7 @@ models:
       +docs:
         node_color: '#B22D35'
     intermediate:
-      materialized: ephemeral
+      materialized: table
       +docs:
         node_color: '#758492'
     staging:

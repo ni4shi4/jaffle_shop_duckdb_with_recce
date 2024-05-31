@@ -17,14 +17,14 @@ pivot_and_aggregate_payments_to_order_grain as (
          sum(
             case
                when payment_method = '{{ payment_method }}' and
-                    status = 'completed'
+                    result = 'success'
                then amount
                else 0
             end
          ) as {{ payment_method }}_amount,
 
       {%- endfor %}
-      sum(case when status = 'completed' then amount end) as total_amount
+      sum(case when result = 'success' then amount else 0 end) as total_amount
 
    from payments
 
