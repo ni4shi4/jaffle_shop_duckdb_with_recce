@@ -28,6 +28,10 @@ models:
       materialized: table
       +docs:
         node_color: '#B22D35'
+    intermediate:
+      materialized: table
+      +docs:
+        node_color: '#758492'
     staging:
       materialized: view
       +docs:
